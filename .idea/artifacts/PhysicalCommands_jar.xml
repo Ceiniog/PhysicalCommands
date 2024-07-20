@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PhysicalCommands:jar">
+    <output-path>F:/Minecraft Servers/Beta 1.7.3/Server Jar/plugins</output-path>
+    <root id="archive" name="PhysicalCommands.jar">
+      <element id="module-output" name="PhysicalCommands" />
+    </root>
+  </artifact>
+</component>

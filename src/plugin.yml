@@ -1,0 +1,17 @@
+name: PhysicalCommands
+main: me.meibion.PhysicalCommands.Main
+version: 1.0
+author: Meibion
+api-version: 1.7.3
+commands:
+  physicalcommand:
+    description: Creates/deletes a physical command object
+    usage: /<command> [Create|Delete]
+    aliases: [physicalcommands, physicalcmds, physcmds, physicalcmd]
+permissions:
+  PhysicalCommands.Admin:
+    description: Allows a user to create and delete physical commands
+    default: op
+  PhysicalCommands.Use:
+    description: Allows a user to use physical commands
+    default: op
