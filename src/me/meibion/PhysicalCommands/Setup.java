@@ -95,7 +95,12 @@ public class Setup {
     }
 
     public void setBlock(Block b) throws IllegalArgumentException {
-        Main.server.getLogger().info("test");
+
+        // Check if block is not null
+        try { b.getType(); }
+        catch (Exception e) { throw new IllegalArgumentException(); }
+
+        // Check if the material is permitted
         if(Main.pluginConfig.isMaterialPermitted(b.getType())) {
             this.block = b;
             return;
