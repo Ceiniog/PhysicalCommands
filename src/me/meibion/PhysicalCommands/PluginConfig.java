@@ -39,7 +39,8 @@ public class PluginConfig extends Configuration {
         // File header
         final String header = String.join("\n",
                 "# Physical Commands Config: -",
-                          "# 'permittedMaterials' - Enter the material name of the blocks that can be assigned a physical command"
+                          "# 'permittedMaterials' - Enter the material name of the blocks that can be assigned a physical command",
+                          "# - 'ALL' can be set as a material to allow all blocks."
         );
         this.setHeader(header);
 
@@ -54,6 +55,9 @@ public class PluginConfig extends Configuration {
 
         for(String permittedMaterial : permittedMaterials) {
             if(permittedMaterial.equalsIgnoreCase(material.name())) {
+                return true;
+            }
+            else if(permittedMaterial.equalsIgnoreCase("ALL")) {
                 return true;
             }
         }
